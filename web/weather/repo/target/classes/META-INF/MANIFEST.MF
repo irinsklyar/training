@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1510649383086
+Build-Jdk: 1.8.0_151
+Built-By: sklyarova
+Bundle-ManifestVersion: 2
+Bundle-Name: repo
+Bundle-SymbolicName: repo
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: com.training.repo;version="1.0.0.SNAPSHOT"
+Tool: Bnd-1.50.0
