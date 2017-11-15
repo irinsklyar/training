@@ -8,7 +8,6 @@ import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 
 
@@ -26,6 +25,7 @@ public class WeatherTest {
         weatherExpected.setCity("Lviv");
         weatherExpected.setTemperature("277.15");
         weatherExpected.setWind("4");
+        weatherExpected.setError(null);
 
         String jsonString = "{\"coord\":{\"lon\":24.02,\"lat\":49.84}," +
                 "\"weather\":[{\"id\":804,\"main\":\"Clouds\",\"description\":\"overcast clouds\",\"icon\":\"04d\"}]," +
@@ -41,4 +41,23 @@ public class WeatherTest {
         //then
         assertEquals(weatherExpected, weatherActual);
     }
+
+    @Test
+    public void shouldReturnWeatherObjectWithErrorCode() throws Exception {
+        //given
+        Weather weatherExpected = new Weather();
+        weatherExpected.setCity("Lvi city name wasn't found");
+        weatherExpected.setTemperature(null);
+        weatherExpected.setWind(null);
+        weatherExpected.setError("404");
+
+
+        String jsonString = "{\"cod\":\"404\",\"message\":\"city not found\"}";
+        when(connToApi.getWeatherInfo("Lvi")).thenReturn(jsonString);
+        //when
+        Weather weatherActual = weatherProcess.getWeather("Lvi");
+        //then
+        assertEquals(weatherExpected, weatherActual);
+    }
+
 }

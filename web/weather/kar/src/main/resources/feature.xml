@@ -10,8 +10,10 @@
         <feature version="3.1.5">cxf</feature>
         <feature>this-project-dependants</feature>
 
-        <bundle>mvn:weather/weatherservice/1.0-SNAPSHOT</bundle>
-        <bundle>mvn:weather/forecast/1.0-SNAPSHOT</bundle>
+        <bundle>mvn:weather/process/1.0-SNAPSHOT</bundle>
+        <bundle>mvn:weather/model/1.0-SNAPSHOT</bundle>
+        <bundle>mvn:weather/rest/1.0-SNAPSHOT</bundle>
+        <bundle>mvn:weather/repo/1.0-SNAPSHOT</bundle>
     </feature>
 
 

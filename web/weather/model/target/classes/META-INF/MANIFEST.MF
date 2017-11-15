@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1510752958983
+Build-Jdk: 1.8.0_151
+Built-By: sklyarova
+Bundle-ManifestVersion: 2
+Bundle-Name: model
+Bundle-SymbolicName: model
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: com.training.model;uses:="javax.xml.bind.annotation";ver
+ sion="1.0.0.SNAPSHOT"
+Import-Package: javax.xml.bind.annotation
+Tool: Bnd-1.50.0

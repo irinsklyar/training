@@ -1,2 +1,3 @@
 com/training/process/WeatherProcessImpl.class
 com/training/process/WeatherProcess.class
+com/training/process/FetchWeatherProcess.class

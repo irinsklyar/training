@@ -10,9 +10,14 @@ public class WeatherProcessImpl implements WeatherProcess {
         Weather weather = new Weather();
         try {
             JSONObject rawData = new JSONObject(connToApi.getWeatherInfo(city));
-            weather.setTemperature(Double.toString(rawData.getJSONObject("main").getDouble("temp")));
-            weather.setWind(Integer.toString(rawData.getJSONObject("wind").getInt("speed")));
-            weather.setCity(city);
+            if (rawData.get("cod").toString().equals("404")) {
+                weather.setError(rawData.get("cod").toString());
+                weather.setCity(city + " city name wasn't found");
+            } else {
+                weather.setTemperature(Double.toString(rawData.getJSONObject("main").getDouble("temp")));
+                weather.setWind(Integer.toString(rawData.getJSONObject("wind").getInt("speed")));
+                weather.setCity(city);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }

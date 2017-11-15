@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1510649382790
+Bnd-LastModified: 1510752962130
 Build-Jdk: 1.8.0_151
 Built-By: sklyarova
 Bundle-Blueprint: OSGI-INF/blueprint/rest.xml
@@ -14,5 +14,5 @@ Import-Package: com.fasterxml.jackson.jaxrs.json,com.training.model;vers
  ion="[1.0,2)",com.training.process;version="[1.0,2)",javax.ws.rs;versio
  n="[2.0,3)",org.osgi.service.blueprint;version="[1.0.0,2.0.0)"
 Import-Service: com.training.process.WeatherProcess;multiple:=false
-Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.5))"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
 Tool: Bnd-3.3.0.201609221906

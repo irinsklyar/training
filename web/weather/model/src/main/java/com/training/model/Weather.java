@@ -1,10 +1,6 @@
 package com.training.model;
 
-import org.apache.commons.lang3.builder.EqualsBuilder;
-import org.apache.commons.lang3.builder.HashCodeBuilder;
-
 import javax.xml.bind.annotation.XmlRootElement;
-import java.util.Map;
 
 @XmlRootElement(name = "weather")
 public class Weather {
@@ -12,6 +8,7 @@ public class Weather {
     private String city;
     private String temperature;
     private String wind;
+    private String error;
 
     public Weather() {
     }
@@ -40,27 +37,33 @@ public class Weather {
         this.wind = wind;
     }
 
+    public String getError() {
+        return error;
+    }
+
+    public void setError(String error) {
+        this.error = error;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof Weather)) return false;
 
         Weather weather = (Weather) o;
 
-        return new EqualsBuilder()
-                .append(city, weather.city)
-                .append(temperature, weather.temperature)
-                .append(wind, weather.wind)
-                .isEquals();
+        if (city != null ? !city.equals(weather.city) : weather.city != null) return false;
+        if (temperature != null ? !temperature.equals(weather.temperature) : weather.temperature != null) return false;
+        if (wind != null ? !wind.equals(weather.wind) : weather.wind != null) return false;
+        return error != null ? error.equals(weather.error) : weather.error == null;
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37)
-                .append(city)
-                .append(temperature)
-                .append(wind)
-                .toHashCode();
+        int result = city != null ? city.hashCode() : 0;
+        result = 31 * result + (temperature != null ? temperature.hashCode() : 0);
+        result = 31 * result + (wind != null ? wind.hashCode() : 0);
+        result = 31 * result + (error != null ? error.hashCode() : 0);
+        return result;
     }
 }

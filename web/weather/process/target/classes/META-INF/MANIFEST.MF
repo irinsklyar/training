@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1510752961508
+Build-Jdk: 1.8.0_151
+Built-By: sklyarova
+Bundle-ManifestVersion: 2
+Bundle-Name: process
+Bundle-SymbolicName: process
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: com.training.process;uses:="org.apache.http.client,org.a
+ pache.http.util,org.apache.http.client.methods,org.apache.http,org.apac
+ he.http.impl.client,com.training.model,org.json";version="1.0.0.SNAPSHO
+ T"
+Export-Service: com.training.process.WeatherProcess
+Import-Package: com.training.model;version="[1.0,2)",org.apache.http,org
+ .apache.http.client,org.apache.http.client.methods,org.apache.http.impl
+ .client,org.apache.http.util,org.json,org.osgi.service.blueprint;versio
+ n="[1.0.0,2.0.0)"
+Tool: Bnd-1.50.0
