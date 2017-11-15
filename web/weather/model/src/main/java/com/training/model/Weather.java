@@ -1,5 +1,8 @@
 package com.training.model;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Map;
 
@@ -9,29 +12,6 @@ public class Weather {
     private String city;
     private String temperature;
     private String wind;
-    public Map<String,String> map;
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Weather weather = (Weather) o;
-
-        if (!city.equals(weather.city)) return false;
-        if (!temperature.equals(weather.temperature)) return false;
-        if (!wind.equals(weather.wind)) return false;
-        return map != null ? map.equals(weather.map) : weather.map == null;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = city.hashCode();
-        result = 31 * result + temperature.hashCode();
-        result = 31 * result + wind.hashCode();
-        result = 31 * result + (map != null ? map.hashCode() : 0);
-        return result;
-    }
 
     public Weather() {
     }
@@ -59,5 +39,28 @@ public class Weather {
     public void setWind(String wind) {
         this.wind = wind;
     }
-//    json
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Weather weather = (Weather) o;
+
+        return new EqualsBuilder()
+                .append(city, weather.city)
+                .append(temperature, weather.temperature)
+                .append(wind, weather.wind)
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+                .append(city)
+                .append(temperature)
+                .append(wind)
+                .toHashCode();
+    }
 }

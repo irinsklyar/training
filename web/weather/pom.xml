@@ -8,6 +8,8 @@
     <name>weather</name>
     <url>http://maven.apache.org</url>
     <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <cxf.version>3.1.5</cxf.version>
     </properties>
     <modules>
@@ -25,13 +27,7 @@
             <version>3.8.1</version>
             <scope>test</scope>
         </dependency>
-        <!--log4j-->
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.17</version>
-            <optional>true</optional>
-        </dependency>
+
         <!--guava-->
         <dependency>
             <groupId>com.google.guava</groupId>
@@ -56,16 +52,7 @@
             <version>1.9.13</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <version>1.6.6</version>
-        </dependency>
+
 
         <dependency>
             <groupId>org.apache.solr</groupId>

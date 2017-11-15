@@ -10,7 +10,7 @@ import javax.ws.rs.Produces;
 @Path("weatherservice")
 public interface WeatherService {
     @GET
-    @Path("/{id}")
+    @Path("/{city}")
     @Produces("application/json")
-    public Weather get(@PathParam("id") String id);
+    public Weather parseWeather(@PathParam("city") String city);
 }
