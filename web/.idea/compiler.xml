@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="forecast" />
+        <module name="model" />
+        <module name="process" />
+        <module name="repo" />
+        <module name="rest" />
+        <module name="weather.forecast" />
+        <module name="weatherservice" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cxf" target="1.5" />
+      <module name="forecast" target="1.5" />
+      <module name="kar" target="1.5" />
+      <module name="model" target="1.5" />
+      <module name="process" target="1.5" />
+      <module name="repo" target="1.5" />
+      <module name="rest" target="1.5" />
+      <module name="weather" target="1.5" />
+      <module name="weather.cxf" target="1.5" />
+      <module name="weather.forecast" target="1.5" />
+      <module name="weatherservice" target="1.5" />
+      <module name="web" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

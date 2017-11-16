@@ -19,6 +19,7 @@
       <module name="repo" target="1.8" />
       <module name="rest" target="1.8" />
       <module name="weather" target="1.8" />
+      <module name="weatherkar" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

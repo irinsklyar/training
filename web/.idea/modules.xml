@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/weather/kar/kar.iml" filepath="$PROJECT_DIR$/weather/kar/kar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/weather/model/model.iml" filepath="$PROJECT_DIR$/weather/model/model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/weather/process/process.iml" filepath="$PROJECT_DIR$/weather/process/process.iml" />
+      <module fileurl="file://$PROJECT_DIR$/weather/repo/repo.iml" filepath="$PROJECT_DIR$/weather/repo/repo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/weather/rest/rest.iml" filepath="$PROJECT_DIR$/weather/rest/rest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/weather/weather.iml" filepath="$PROJECT_DIR$/weather/weather.iml" />
+    </modules>
+  </component>
+</project>
