@@ -1,0 +1,8 @@
+/home/NIX/sklyarova/java/rest/src/main/java/com/training/process/WeatherProcessImpl.java
+/home/NIX/sklyarova/java/rest/src/main/java/com/training/service/WeatherServiceImpl.java
+/home/NIX/sklyarova/java/rest/src/main/java/com/training/repo/WeatherDao.java
+/home/NIX/sklyarova/java/rest/src/main/java/com/training/process/FetchWeatherProcess.java
+/home/NIX/sklyarova/java/rest/src/main/java/com/training/process/WeatherProcess.java
+/home/NIX/sklyarova/java/rest/src/main/java/com/training/model/Weather.java
+/home/NIX/sklyarova/java/rest/src/main/java/weather/App.java
+/home/NIX/sklyarova/java/rest/src/main/java/com/training/service/WeatherService.java
