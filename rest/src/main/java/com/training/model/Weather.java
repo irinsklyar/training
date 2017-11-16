@@ -10,9 +10,6 @@ public class Weather {
     private String wind;
     private String error;
 
-    public Weather() {
-    }
-
     public String getCity() {
         return city;
     }

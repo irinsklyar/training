@@ -1,7 +1,7 @@
-com/training/repo/WeatherDao.class
 com/training/process/WeatherProcessImpl.class
 com/training/service/WeatherServiceImpl.class
 com/training/model/Weather.class
 com/training/service/WeatherService.class
 com/training/process/WeatherProcess.class
 com/training/process/FetchWeatherProcess.class
+com/training/repo/WeatherDaoInt.class

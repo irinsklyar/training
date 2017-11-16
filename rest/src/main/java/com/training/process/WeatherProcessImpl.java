@@ -3,13 +3,17 @@ package com.training.process;
 import com.training.model.Weather;
 import org.json.JSONObject;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class WeatherProcessImpl implements WeatherProcess {
     private FetchWeatherProcess connToApi;
-
+    private static final Logger LOGGER = Logger.getLogger( WeatherProcess.class.getName() );
     public Weather getWeather(String city) {
         Weather weather = new Weather();
         try {
             JSONObject rawData = new JSONObject(connToApi.getWeatherInfo(city));
+
             if (rawData.get("cod").toString().equals("404")) {
                 weather.setError(rawData.get("cod").toString());
                 weather.setCity(city + " city name wasn't found");
@@ -19,7 +23,7 @@ public class WeatherProcessImpl implements WeatherProcess {
                 weather.setCity(city);
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            LOGGER.log(Level.SEVERE,e.toString(),e);
         }
         return weather;
     }
