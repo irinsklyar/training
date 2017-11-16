@@ -5,4 +5,3 @@ com/training/model/Weather.class
 com/training/service/WeatherService.class
 com/training/process/WeatherProcess.class
 com/training/process/FetchWeatherProcess.class
-weather/App.class

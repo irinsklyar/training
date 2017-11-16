@@ -14,11 +14,4 @@ public class WeatherServiceImpl implements WeatherService {
         return weatherProcess.getWeather(city);
     }
 
-//    public WeatherProcess getWeatherProcess() {
-//        return weatherProcess;
-//    }
-//
-//    public void setWeatherProcess(WeatherProcess weatherProcess) {
-//        this.weatherProcess = weatherProcess;
-//    }
 }

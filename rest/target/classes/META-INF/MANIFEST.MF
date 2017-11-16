@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1510836970887
+Build-Jdk: 1.8.0_151
+Built-By: sklyarova
+Bundle-Blueprint: OSGI-INF/blueprint/rest.xml
+Bundle-ManifestVersion: 2
+Bundle-Name: rest
+Bundle-SymbolicName: rest
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: com.training.service;version="1.0.0.SNAPSHOT";uses:="jav
+ ax.ws.rs"
+Export-Service: com.training.service.WeatherService;osgi.service.bluepri
+ nt.compname=restServiceImpl,com.training.process.WeatherProcess;osgi.se
+ rvice.blueprint.compname=processBean
+Import-Package: javax.ws.rs;version="[2.0,3)",javax.xml.bind.annotation,
+ org.apache.http,org.apache.http.client,org.apache.http.client.methods,o
+ rg.apache.http.impl.client,org.apache.http.util,org.codehaus.jackson.ja
+ xrs;version="[1.9,2)",org.json,org.osgi.service.blueprint;version="[1.0
+ .0,2.0.0)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-3.3.0.201609221906
