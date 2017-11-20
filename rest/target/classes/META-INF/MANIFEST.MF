@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1510851613088
+Bnd-LastModified: 1511177300419
 Build-Jdk: 1.8.0_151
 Built-By: sklyarova
 Bundle-Blueprint: OSGI-INF/blueprint/rest.xml
@@ -13,10 +13,10 @@ Export-Package: com.training.service;version="1.0.0.SNAPSHOT";uses:="jav
 Export-Service: com.training.service.WeatherService;osgi.service.bluepri
  nt.compname=restServiceImpl,com.training.process.WeatherProcess;osgi.se
  rvice.blueprint.compname=processBean
-Import-Package: javax.ws.rs;version="[2.0,3)",javax.xml.bind.annotation,
- org.apache.http,org.apache.http.client,org.apache.http.client.methods,o
- rg.apache.http.impl.client,org.apache.http.util,org.codehaus.jackson.ja
- xrs;version="[1.9,2)",org.json,org.osgi.service.blueprint;version="[1.0
- .0,2.0.0)"
+Import-Package: com.datastax.driver.core;version="[3.1,4)",javax.ws.rs;v
+ ersion="[2.0,3)",javax.xml.bind.annotation,org.apache.http,org.apache.h
+ ttp.client,org.apache.http.client.methods,org.apache.http.impl.client,o
+ rg.apache.http.util,org.codehaus.jackson.jaxrs;version="[1.9,2)",org.js
+ on,org.osgi.service.blueprint;version="[1.0.0,2.0.0)"
 Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
 Tool: Bnd-3.3.0.201609221906
