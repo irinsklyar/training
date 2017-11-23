@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.2.1"
+          name="rest">
+    <repository>mvn:org.apache.cxf.karaf/apache-cxf/3.1.2/xml/features</repository>
+
+    <feature name="rest" version="1.0-SNAPSHOT" description="rest">
+        <feature prerequisite="true">http</feature>
+        <feature prerequisite="true">cxf</feature>
+
+
+        <!--<feature>this-project-dependants</feature>-->
+
+        <bundle>mvn:weather/rest/1.0-SNAPSHOT</bundle>
+        <bundle>mvn:weather/rest/1.0-SNAPSHOT</bundle>
+    </feature>
+
+
+    <!--<feature name="this-project-dependants">-->
+    <!--&lt;!&ndash; Dependent bundles-->
+    <!--<bundle>mvn:org.apache.cxf.karaf/apache-cxf/3.0.8/xml/features</bundle>-->
+    <!--<bundle>mvn:org.codehaus.jackson/jackson-core-asl/1.9.5</bundle>-->
+    <!--<bundle>mvn:org.codehaus.jackson/jackson-mapper-asl/1.9.5</bundle>-->
+    <!--<bundle>mvn:org.codehaus.jackson/jackson-jaxrs/1.9.5</bundle>-->
+    <!--<bundle>mvn:com.google.guava/guava/14.0.1</bundle>-->
+    <!--<bundle>wrap:mvn:org.apache.httpcomponents/httpcore/4.2.4</bundle>-->
+    <!--<bundle>wrap:mvn:org.apache.httpcomponents/httpmime/4.2.5</bundle>-->
+    <!--<bundle>wrap:mvn:org.noggit/noggit/0.5</bundle>-->
+    <!--<bundle>wrap:mvn:org.apache.solr/solr-solrj/4.4.0</bundle>-->
+    -->
+    <!--</feature>-->
+
+
+</features>
